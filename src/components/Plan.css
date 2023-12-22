@@ -1,0 +1,39 @@
+.CardPlan {
+  background-color: #111827;
+  width: 300px;
+  border-radius: 25px;
+  height: 420px;
+  overflow: hidden;
+  color: gainsboro;
+}
+.CardPlan-Price {
+  color: #fff;
+  font-size: 30px;
+}
+.CarPlan-Description {
+  height: 40px;
+}
+.CardPlan-Body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+.CardPlan-Body > ul {
+  text-align: left;
+  font-size: 18px;
+}
+
+.CardPlan-Body > ul > li {
+  color: gainsboro;
+  padding-top: 15px;
+}
+.CardPlan-Btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #1c64f2;
+  position: relative;
+  color: white;
+  font-size: 15px;
+}
