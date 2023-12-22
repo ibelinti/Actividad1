@@ -1,4 +1,4 @@
-import "./Detalles.css"
+import "./Detalles.css";
 import { useParams } from "react-router-dom";
 
 export function Detalles() {
@@ -10,21 +10,33 @@ export function Detalles() {
   return (
     <div>
       <h1>{data.jawSummary.title}</h1>
-
-      <h2>{data.jawSummary.currentContextualSynopsis.text}</h2>
+      <img
+        className="Detelles-Imagen"
+        src={data.jawSummary.backgroundImage.url}
+        alt="backgroundImage"
+      ></img>
       <a
         href={`https://www.netflix.com/watch/${data.jawSummary.id}?trackId=${data.jawSummary.trackIds.trackId}`}
       >
-        <img
-          src={data.jawSummary.backgroundImage.url}
-          alt="backgroundImage"
-        ></img>
+        <div className="Detalles-Botones">
+          <button>Comprar</button>
+          <button>Alquilar</button>
+        </div>
       </a>
+
+      <p>{data.jawSummary.currentContextualSynopsis.text}</p>
+
       <h6>Géreno: {data.jawSummary.genres[0].name}</h6>
-      <h6>Disponible desde el: {data.jawSummary.availability.availabilityDate}</h6>
-      <h6>{data.jawSummary.maturity.rating.value} - {data.jawSummary.maturity.rating.maturityDescription} - {data.jawSummary.maturity.rating.specificRatingReason}</h6>
+      <h6>
+        Disponible desde el: {data.jawSummary.availability.availabilityDate}
+      </h6>
+      <h6>
+        {data.jawSummary.maturity.rating.value} -{" "}
+        {data.jawSummary.maturity.rating.maturityDescription} -{" "}
+        {data.jawSummary.maturity.rating.specificRatingReason}
+      </h6>
       <h6>{data.jawSummary.numSeasonsLabel}-</h6>
-      
+
       <section className="Detalles-Cast">
         <h2>Cast</h2>
         <ul>

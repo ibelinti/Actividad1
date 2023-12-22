@@ -1,6 +1,6 @@
 import "./Home.css";
 import { Movie } from "./Movie";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export function Home() {
   const defaultState = newData;

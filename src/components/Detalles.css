@@ -2,4 +2,14 @@
     list-style-type: none;
 }
 
+.Detelles-Imagen{
+    width: 100vw;
+}
 
+.Detalles-Botones{
+    justify-content: space-between;
+}
+.Detalles-Botones>button{
+    background-color: black;
+    color:white;
+}
