@@ -19,26 +19,24 @@ export function Detalles() {
         href={`https://www.netflix.com/watch/${data.jawSummary.id}?trackId=${data.jawSummary.trackIds.trackId}`}
       >
         <div className="Detalles-Botones">
-          <button>Comprar</button>
-          <button>Alquilar</button>
+          <button className="Detalles-Botones-Comprar">Comprar</button>
+          <button className="Detalles-Botones-Alquilar">Alquilar</button>
         </div>
-      </a>
+      </a>      <h4>{data.jawSummary.genres[0].name} | {data.jawSummary.availability.availabilityDate} </h4>
+
 
       <p>{data.jawSummary.currentContextualSynopsis.text}</p>
 
-      <h6>Géreno: {data.jawSummary.genres[0].name}</h6>
-      <h6>
-        Disponible desde el: {data.jawSummary.availability.availabilityDate}
-      </h6>
-      <h6>
+      
+      <h4>
         {data.jawSummary.maturity.rating.value} -{" "}
         {data.jawSummary.maturity.rating.maturityDescription} -{" "}
         {data.jawSummary.maturity.rating.specificRatingReason}
-      </h6>
-      <h6>{data.jawSummary.numSeasonsLabel}-</h6>
+      </h4>
+      <h3>{data.jawSummary.numSeasonsLabel}-</h3>
 
       <section className="Detalles-Cast">
-        <h2>Cast</h2>
+        <h3>Cast</h3>
         <ul>
           {data.jawSummary.cast.map((obj) => (
             <li>{obj.name}</li>

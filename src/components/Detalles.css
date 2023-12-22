@@ -1,15 +1,23 @@
-.Detalles-Cast>ul{
-    list-style-type: none;
+.Detalles-Cast > ul {
+  list-style-type: none;
 }
 
-.Detelles-Imagen{
-    width: 100vw;
+.Detelles-Imagen {
+  width: 100vw;
 }
 
-.Detalles-Botones{
-    justify-content: space-between;
+.Detalles-Botones {
+  justify-content: space-around;
+  align-items: center;
 }
-.Detalles-Botones>button{
-    background-color: black;
-    color:white;
+.Detalles-Botones > button {
+  color: black;
+}
+
+.Detalles-Botones-Comprar {
+  background-color: rgb(171, 159, 159);
+}
+
+.Detalles-Botones-Alquilar {
+  background-color: rgb(171, 159, 159);
 }

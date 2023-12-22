@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { NavLink } from "./NavLink";
 import { Home } from "./components/Home";
 import { Planes } from "./components/Planes";
-import { Busqueda } from "./components/Busqueda";
+import { Login } from "./components/Login";
 import { Detalles } from "./components/Detalles";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
               <NavLink to="/Planes">Planes</NavLink>
             </li>
             <li>
-              <NavLink to="/Busqueda">Busqueda</NavLink>
+              <NavLink to="/IniciarSesion">Iniciar Sesión</NavLink>
             </li>
           </ul>
         </nav>
@@ -29,7 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Planes" element={<Planes />}></Route>
-        <Route path="/Busqueda" element={<Busqueda />} />
+        <Route path="/IniciarSesion" element={<Login />}></Route>
+
         <Route
           path="/movies/:id"
           element={<Detalles />}
