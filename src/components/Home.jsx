@@ -4,16 +4,10 @@ import { useState, useEffect } from "react";
 
 export function Home() {
   const defaultState = newData;
-  const defaultState1 = newData.filter(
-    (filtro) => filtro.jawSummary.genres[0].name === "Sitcoms"
-  );
-
+ 
   const [searchItem, setSearchItem] = useState(defaultState);
 
-  useEffect(() => {
-    setSearchItem(defaultState1);
-  }, []);
-
+  
   const handleChangeFilter = (event) => {
 
     const contenidoFiltrado = event.target.value === "Todos"? newData:newData.filter(
@@ -46,7 +40,7 @@ export function Home() {
               id: data.jawSummary.id,
               name: data.jawSummary.title,
               image: data.jawSummary.backgroundImage.url,
-              link: "data.link",
+              url: "data.link",
               description: data.jawSummary.synopsis,
             }}
           ></Movie>
