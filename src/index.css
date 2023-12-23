@@ -12,25 +12,32 @@ code {
     monospace;
 }
 
-header {
+.App-Header {
   display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: space-between;
-  padding: 16px;
   background: #111827;
-  color:white;
+  color: white;
+  padding-left: 15px;
 }
-nav ul {
+.App-Menu {
+  width: 400px;
+  align-items: end;
+}
+
+.App-Nav ul {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   list-style-type: none;
 }
 
-nav a {
+.App-Nav a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
-nav a.is-active {
+.App-Nav a.is-active {
   font-weight: bold;
   pointer-events: none;
 }

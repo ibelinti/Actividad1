@@ -27,7 +27,22 @@ export function Planes() {
               "Permite alquilar peliculas y comprar para que las puedas disfrutar cuando quieras",
             details: [
               "Alquilar sin límintes",
-              "Cuaro películas concurrentes",
+              "Cuatro películas concurrentes",
+              "Descarga para ver offline",
+              "Cancela cuando quieras",
+            ],
+          }}
+          size={100}
+        />
+        <Plan
+          plan={{
+            name: "Plan 3",
+            price: "$ 37.99",
+            description:
+              "Plan sin limites",
+            details: [
+              "Alquilar sin límintes",
+              "Películas concurrentes ilimitadas",
               "Descarga para ver offline",
               "Cancela cuando quieras",
             ],

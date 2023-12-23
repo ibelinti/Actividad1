@@ -46,9 +46,6 @@ export function Login() {
         <Button  class="Login-Boton" type="submit" disabled={!validateForm()}>
           Login
         </Button>
-        <Button  class="Login-Boton" >
-          Crear usuario
-        </Button>
       </Form>
      
     </div>

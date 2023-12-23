@@ -1,43 +1,38 @@
-import "./Registro.css";
-import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import * as React from "react";
+import { useForm } from "react-hook-form";
 
 export function Registro() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    function validateForm() {
-        return email.length > 0 && password.length > 0;
-      }
-    
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      category: '',
+      checkbox: [],
+      radio: ''
+    }
+  });
+
   return (
-    <div className="Login">
-      <Form >
-        <Form.Group size="lg" controlId="email">
-          <Form.Label>Usuario</Form.Label>
+    <form onSubmit={handleSubmit(console.log)}>
+      <input {...register("firstName", { required: true })} placeholder="First name" />
 
-          <Form.Control
-            autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
+      <input {...register("lastName", { minLength: 2 })} placeholder="Last name" />
 
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Contraseña</Form.Label>
+      <select {...register("category")}>
+        <option value="">Select...</option>
+        <option value="A">Category A</option>
+        <option value="B">Category B</option>
+      </select>
+      
+      <input {...register("checkbox")} type="checkbox" value="A" />
+      <input {...register("checkbox")} type="checkbox" value="B" />
+      <input {...register("checkbox")} type="checkbox" value="C" />
+      
+      <input {...register("radio")} type="radio" value="A" />
+      <input {...register("radio")} type="radio" value="B" />
+      <input {...register("radio")} type="radio" value="C" />
 
-          <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
-        </Button>
-      </Form>
-    </div>
+      <input type="submit" />
+    </form>
   );
 }

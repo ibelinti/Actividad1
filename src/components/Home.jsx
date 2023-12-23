@@ -4,15 +4,15 @@ import { useState } from "react";
 
 export function Home() {
   const defaultState = newData;
- 
+
   const [searchItem, setSearchItem] = useState(defaultState);
-
-  
   const handleChangeFilter = (event) => {
-
-    const contenidoFiltrado = event.target.value === "Todos"? newData:newData.filter(
-      (filtro) => filtro.jawSummary.genres[0].name === event.target.value
-    );
+    const contenidoFiltrado =
+      event.target.value === "Todos"
+        ? newData
+        : newData.filter(
+            (filtro) => filtro.jawSummary.genres[0].name === event.target.value
+          );
     setSearchItem(contenidoFiltrado);
   };
 
