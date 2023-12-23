@@ -21,7 +21,7 @@ export function Login() {
 
   return (
     <div className="Login">
-      <Form onSubmit={handleSubmit}>
+      <Form className="form" onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
           <Form.Label>Usuario</Form.Label>
 
@@ -43,10 +43,14 @@ export function Login() {
           />
         </Form.Group>
 
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <Button  class="Login-Boton" type="submit" disabled={!validateForm()}>
           Login
         </Button>
+        <Button  class="Login-Boton" >
+          Crear usuario
+        </Button>
       </Form>
+     
     </div>
   );
 }
