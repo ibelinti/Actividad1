@@ -1,38 +1,41 @@
+import "./Registro.css"
 import * as React from "react";
 import { useForm } from "react-hook-form";
 
 export function Registro() {
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      category: '',
+      firstName: "",
+      lastName: "",
+      category: "",
       checkbox: [],
-      radio: ''
-    }
+      radio: "",
+    },
   });
 
   return (
-    <form onSubmit={handleSubmit(console.log)}>
-      <input {...register("firstName", { required: true })} placeholder="First name" />
+    <form onSubmit={handleSubmit(console.log)} className="Resgitro-Form">
+      <input
+        {...register("firstName", { required: true })}
+        placeholder="Nombre"
+      />
 
-      <input {...register("lastName", { minLength: 2 })} placeholder="Last name" />
+      <input
+        {...register("lastName", { minLength: 2 })}
+        placeholder="Apellido"
+      />
+      <input
+        {...register("email", { required: true })}
+        placeholder="Email"
+      />
 
       <select {...register("category")}>
-        <option value="">Select...</option>
-        <option value="A">Category A</option>
-        <option value="B">Category B</option>
+        <option value="">Selecione el plan...</option>
+        <option value="Plan 1">Plan 1</option>
+        <option value="Plna 2">Plan 2</option>
+        <option value="Plna 3">Plan 3</option>
       </select>
-      
-      <input {...register("checkbox")} type="checkbox" value="A" />
-      <input {...register("checkbox")} type="checkbox" value="B" />
-      <input {...register("checkbox")} type="checkbox" value="C" />
-      
-      <input {...register("radio")} type="radio" value="A" />
-      <input {...register("radio")} type="radio" value="B" />
-      <input {...register("radio")} type="radio" value="C" />
-
-      <input type="submit" />
+      <input type="submit" value="Crear" />
     </form>
   );
 }

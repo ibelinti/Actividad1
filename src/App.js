@@ -35,7 +35,6 @@ function App() {
         <Route path="/Planes" element={<Planes />}></Route>
         <Route path="/IniciarSesion" element={<Login />}></Route>
         <Route path="/Registro" element={<Registro />}></Route>
-
         <Route path="/movies/:id" element={<Detalles />}></Route>
         <Route path="*" element={<h1>Not found</h1>} />
       </Routes>

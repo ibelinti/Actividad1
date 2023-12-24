@@ -22,19 +22,18 @@ export function Detalles() {
           <button className="Detalles-Botones-Comprar">Comprar</button>
           <button className="Detalles-Botones-Alquilar">Alquilar</button>
         </div>
-      </a>      <h4>{data.jawSummary.genres[0].name} | {data.jawSummary.availability.availabilityDate} </h4>
-
-
+      </a>{" "}
+      <h4>
+        {data.jawSummary.genres[0].name} |{" "}
+        {data.jawSummary.availability.availabilityDate}{" "}
+      </h4>
       <p>{data.jawSummary.currentContextualSynopsis.text}</p>
-
-      
       <h4>
         {data.jawSummary.maturity.rating.value} -{" "}
         {data.jawSummary.maturity.rating.maturityDescription} -{" "}
         {data.jawSummary.maturity.rating.specificRatingReason}
       </h4>
       <h3>{data.jawSummary.numSeasonsLabel}-</h3>
-
       <section className="Detalles-Cast">
         <h3>Cast</h3>
         <ul>
